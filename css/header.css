@@ -1,0 +1,149 @@
+*{margin:0;padding:0}
+/******头部top********/
+.head {width: 100%;}
+.head-top{
+	width:100%;
+	min-width:1500px;
+	height:40px;
+	background:#f8f8f8;
+	float:left;
+	}	
+	.head-top .ht{
+		width: 1100px;
+		margin: 0 auto;
+		color: #7C7C7C; 
+	}
+	.head-top .ht .ht-left{
+		float: left;
+		font-family: 'SimSun Regular';
+		line-height: 40px;
+	}
+	.head-top .ht .ht-right{float: right;}
+	.ht-right .serv{padding-right:0;background:none !important}
+	.head-top .ht .ht-right ul li{
+		float: left; 
+		padding-left: 10px; 
+		font-family: 'SimSun Regular'; 
+		line-height: 40px; 
+		background: url(../image/ico_06.png) right no-repeat;
+	}
+	.ht-left a,.ht-right a{color:#656565;margin-right:10px;}
+	.ht-right ul li span{
+		width: 20px; 
+		line-height: 25px;
+		margin-left: 5px; 
+		position: relative; 
+		top: -1px; 
+}
+/***main部分*****/
+.head-main { width: 1100px; margin: 13px auto; }
+	.hm{ margin-top: 20px;}
+	.hm-left {
+		float: left;
+		width: 300px;
+		margin-top: -12px;
+	}
+	.hm-center{float: left;}
+/***搜索框样式*****/
+	#searchInput{
+			font-family: SimSun;
+			width: 409px;
+			height: 30px;
+			font-size: 12px;
+			letter-spacing: 1px; /*�ַ����*/
+			line-height: 30px;
+			padding-left: 3px;
+			float: left;
+			border: 1px solid #B5B5B5;
+			background: #f8f8f8;
+			color:#222;
+		}
+		#searchBtn{    
+			width: 35px;
+			height: 32px;
+			float: left;
+	}
+	#searchBtn>img{height:33px}
+	.hc-bottom ul li.hot~li{width:auto;margin-right:15px}
+	.hc-bottom ul li:last-child{color:#0066b8;}
+	.hc-bottom ul li a,.hot{
+		width: 60px;
+		text-align: center;
+		font-family: '����';
+		color: #666;
+		line-height: 40px;
+	}
+	.hm-right{float: right;}
+	.hr{float: left;}
+	.hr span{
+		width: 50px;
+		margin-left: 1px;
+		font-family: '����';
+		font-size: 12px;
+		text-align:center;
+		color: #666;
+		position: relative;
+		float: left;
+	}
+	.mycart:before {
+		content: '';
+		width: 1px;
+		height: 50px;
+		background-color: #ddd;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+	.cartcount{    
+		background: url(../image/circle.png) left top no-repeat;
+		color: #fff;
+		display: block; 
+		width: 20px;
+		height: 20px;
+		line-height: 20px;
+		text-align: center;
+		border-radius: 50%;
+		position: absolute;
+		left: 25px;
+		top: 12px;
+		font-weight: normal;
+}
+/****bottom样式*****/
+.head-bottom { border-top: 2px solid #e5e5e5; margin-top: 15px; border-bottom: 2px solid black;  margin-bottom:60px}
+.head-nav{width: 1100px; margin: 0 auto;height: 45px}
+.head-nav > ul > li { float: left; margin-top: -2px; position:relative }
+	.head-nav>ul>li>a{
+		float: left;
+		font-family:'Microsoft YaHei';
+		font-size: 16px;
+		color: #333;
+		height: 49px;
+		line-height:49px;
+		padding:0px 36px;
+	}
+	 /* 在一级菜单中，鼠标悬停时的样式 */
+	.head-nav>ul>li>a:hover,.head-nav>ul>li>a.allt{
+		background-color:#333;
+		color:#fff;
+		margin: 0px 0; 
+		line-height: 47px;
+	}
+	.allType>a{background:url(../image/alltype.png) 140px center no-repeat;
+}
+/*首页弹出框*/
+.popUpBox>div:nth-child(2){display: block;}
+.head-nav .popUpBox { position: absolute; top: 50px; *left: 0; width: 1100px; border: 2px solid #2b2b2b; border-top: none; background-color: #fff; display: none; font-family: Microsoft YaHei; z-index:20}
+.head-nav .popUpBox .pub-left ul li a div { position: absolute; padding-top: 10px; }
+.head-nav .popUpBox .pub-left, .head-nav .popUpBox .allType-right { float: left; }
+.head-nav .popUpBox .pub-left ul { width: 166px; }
+.head-nav .popUpBox .pub-left li a { font-size: 16px; color: #333; display: block; height: 48px; text-indent: 40px; margin-bottom: 1px; background-color: #ededed; background-repeat: no-repeat; background-position: 30px center; }
+.head-nav .popUpBox .pub-left li a:hover, .head-nav .popUpBox .pub-left li a.active { background-color: #fff; color: #333; }
+.head-nav .popUpBox .pub-left li a img { margin-left: -3px; }
+.head-nav .popUpBox .pub-center { float: left; width: 60%; box-sizing: border-box; height: 390px; border: 1px solid #fff; padding-left: 20px; padding-right: 20px; overflow: auto; }
+.head-nav .popUpBox .pub-center .items { height: 38px; padding-top: 5px; padding-bottom: 5px; line-height: 40px; border-top: 1px solid #eaeaea; }
+.head-nav .popUpBox .pub-center .items .t-head { float: left; width: 90px; }
+.head-nav .popUpBox .pub-center .items .t-head a { font-size: 14px; color: #0068b7; position:relative}
+.head-nav .popUpBox .pub-right { float: left; width: 40%; height: 390px; border-left: 1px solid #eaeaea; box-sizing: border-box; overflow: auto; }
+.head-nav .popUpBox .pub-right .title { font-size: 14px; color: #0068b7; text-align: center; color: #000; height: 48px; line-height: 48px; }
+.head-nav .popUpBox .pub-right .brands .items { float: left; width: 50%; height: 100px; border-right: 1px solid #eaeaea; border-bottom: 1px solid #eaeaea; box-sizing: border-box; text-align: center; }
+.head-nav .popUpBox .allType-right { display: none; width: 934px; }

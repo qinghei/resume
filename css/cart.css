@@ -1,0 +1,631 @@
+body{margin:0;padding:0}
+.changepay .leftnotice a:hover,
+.procart .cart-second li .li-right a:hover,
+.addrdetail .use:hover, 
+.card .choice .card-c3 a:hover,
+.card .choice .usejifen:hover,
+.personaddr .addr-right a:hover,
+.personaddr .addr-right .newaddr:hover {color: #0068b7;}
+
+.container .cart {
+    width: 100%;
+    font-weight: bold;
+    color: #FFF;
+    font-family: 'Microsoft YaHei';
+    background: #0168B7;
+    margin-top: 15px;
+}
+
+.cart .mycart {
+    float: left;
+    width: 200px;
+    font-size: 24px;
+    line-height: 80px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.cart .step1 {
+    float: left;
+    width: 165px;
+    font-size: 12px;
+    overflow: hidden;
+    background: url(../image/carttorightico_02.png) right no-repeat;
+}
+
+.cart .step-margin {
+    margin-left: 240px;
+}
+
+.cart .step1 .step-left {
+    float: left;
+    width: 70px;
+    text-align: center;
+    line-height: 80px;
+}
+
+.cart .step1 .step-right {
+    float: left;
+    width: 85px;
+    text-align: left;
+    margin-top: 24px;
+}
+
+    .cart .step1 .step-right span {
+        line-height: 18px;
+            display: block;
+    }
+
+.cart .step4{background:none;}
+.cart .step4, .cart .step3 {
+    opacity: 0.5;
+}
+.cart_main{border-collapse:collapse;border-spacing:0}
+.cart_main .bg-f2{background: #fff;}
+.cart_main table tbody tr{background: #fff;} 
+.container .payover {
+    margin: 100px auto;
+    text-align: center;
+    margin-bottom: 170px;
+}
+.container .payover .paysucc {
+  font-family: 'Microsoft YaHei';
+  font-size: 24px;
+  color: black;
+  line-height: 50px;
+}
+.container .payover .paynum {
+  font-family: SimSun;
+  font-size: 12px;
+  color: #999;
+  line-height: 25px;
+}
+.container .payover .paydetail {
+  font-family: 'Microsoft YaHei';
+  font-size: 14px;
+  color: #666;
+  line-height: 30px;
+}
+  .container .payover .paydetail span {
+  font-family: Arial;
+}    
+.payover .gotopay, .changepay .paynow {
+    width: 130px;
+    text-align: center;
+    margin: 0 auto;
+    color: #FFF;
+    background: #333;
+    margin-top: 100px;
+    line-height: 42px;
+    font-family: 'Microsoft YaHei';
+    font-size: 20px;
+    display: block;
+}
+.payover .gotopay:hover, .changepay .paynow:hover {opacity: 0.8;}
+/*订单支付页面添加样式*/
+
+.container .changepay {
+    margin-top: 25px;
+    border-top: 1px solid black;
+}
+.container .changepay .changedetail {
+  font-family: 'Microsoft YaHei';
+  font-size: 12px;
+  color: #000;
+  line-height: 40px;
+  padding-left: 30px;
+  background: #fafafa;
+  border-bottom: 1px solid #e5e5e5;
+}
+.container .changepay ul {
+  overflow: hidden;
+}
+.container .changepay ul li {
+  float: left;
+  width: 150px;
+}
+.container .changepay ul li img {}
+.changepay .paynow {margin-bottom: 100px;}
+/*填写订单页面添加样式*/
+.changepay .leftnotice {
+    font-family: 'Microsoft YaHei';
+    font-size: 14px;
+    color: #000;
+    font-weight: bold;
+    line-height: 50px;
+    margin-top: 8px;
+    border-bottom: 1px solid #696969;
+}
+
+    .changepay .leftnotice a {
+        float: right;
+        font-family: SimSun;
+        font-size: 12px;
+        color: #323232;
+        font-weight: 100;
+    }
+
+.changepay .addrees {
+    margin-top: 22px;
+}
+
+    .changepay .addrees .personaddr {
+    }
+
+        .changepay .addrees .personaddr .pad {
+            position: relative;
+            float: left;
+            width: 250px;
+               padding:10px 15px;
+            padding-bottom: 10px;
+            font-family: SimSun;
+            font-size: 12px;
+            color: #999;
+            line-height: 25px;
+            margin-left: 10px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+
+            .changepay .addrees .personaddr .pad .addrimg {
+                display: none;
+                width: 41px;
+                height: 34px;
+                right: 0;
+                bottom:0;
+                position: absolute;
+            }
+
+            .changepay .addrees .personaddr .pad.active {
+                border: 1px solid #000;
+            }
+
+.otheraddr .addrlist .out-p.active {
+    border: 1px solid #000;
+
+}
+
+.changepay .addrees .personaddr .pad .pad-2 {
+    color: black;
+    line-height: 34px;
+}
+
+.personaddr .pad .pad-3, .personaddr .pad .pad-4, .personaddr .pad .pad-2 {
+    line-height: 20px;
+}
+
+.personaddr .addr-right {
+    float: left;
+    width: 100px;
+    text-align: center;
+    margin-left: 65px;
+    margin-top: 30px;
+}
+
+    .personaddr .addr-right a {
+        display: block;
+        width: 80px;
+        line-height: 25px;
+        font-family: 'Microsoft YaHei';
+        font-size: 12px;
+        color: #333;
+        border: 1px solid black;
+    }
+
+    .personaddr .addr-right .newaddr {
+        margin-top: 15px;
+    }
+
+.addrees .addrdetail {
+    display: none;
+    text-align: center;
+    background: #fafafa;
+    margin:20px 0;
+    padding: 20px;
+}
+
+.addrdetail table tr .red {
+    color: red;
+}
+.addrees .addrdetail table tr td .sheng, .addrees .addrdetail table tr td .shi, .addrees .addrdetail table tr td .jie {
+    float: left;
+    width: 135px;
+    color: #333;
+}
+
+.addrees .addrdetail table tr td .shi, .addrees .addrdetail table tr td .jie {
+    margin-left: 10px;
+}
+
+.addrees .addrdetail table tr td .input-name {
+    float: left;
+    width: 180px;
+    line-height: 20px;
+}
+.addrees .addrdetail table tr td label.error{color:#ff0000}
+.addrees .addrdetail table tr{height:35px;}
+.addrees .addrdetail table tr td input{width:190px;}
+.addrees .addrdetail table tr {
+    position:relative;
+}
+.addrees .addrdetail table tr td input {
+    position:relative;
+}
+
+.addrees .addrdetail table tr td .input-addr {
+    float: left;
+    width: 425px;
+    line-height: 20px;
+}
+
+.addrdetail .use {
+    width: 70px;
+    font-family: 'Microsoft YaHei';
+    font-size: 12px;
+    color: #000;
+    line-height: 25px;
+    display: block;
+    text-align: center;
+    border: 1px solid #000;
+    margin-top: 20px;
+    margin-left: 245px;
+    background: #fff;
+}
+/*使用优惠券部分*/
+.card {
+    margin-top: 15px;
+    margin-left: 35px;
+    width: 750px;
+}
+
+    .card .usecard {
+        width: 600px;
+        font-family: 'Microsoft YaHei';
+        font-size: 12px;
+        color: #323232;
+        line-height: 25px;
+    }
+
+    .card img {
+        padding-right: 5px;
+    }
+
+    .card .choice {
+        width: 720px;
+        margin-top: 5px;
+        font-family: 'Microsoft YaHei';
+        font-size: 12px;
+        color: #ccc;
+        line-height: 25px;
+        padding-left: 15px;
+        border: 1px solid #CCC;
+    }
+
+        .card .choice .c1margin {
+            margin-top: 10px;
+        }
+
+        .card .choice .card-c1 input, .card .choice .card-c2 input {
+            margin-right: 8px;
+        }
+
+        .card .choice .card-c3 {
+            margin: 8px 0;
+        }
+
+            .card .choice .card-c3 img {
+                margin-left: -85px;
+                cursor: pointer;
+            }
+
+            .card .choice .card-c3 .input-card {
+                float: left;
+                width: 140px;
+                border: 1px solid #999;
+                height: 25px;
+                padding-left: 3px;
+                margin-bottom: 8px;
+            }
+
+            .card .choice .card-c3 a, .card .choice .jifen .usejifen {
+                float: left;
+                display: block;
+                width: 53px;
+                line-height: 27px;
+                background: #333;
+                color: #fff;
+                text-align: center;
+                margin-left:15px;
+               
+            }
+    .card .choice .card-c3 a:hover, .card .choice .jifen .usejifen:hover {
+      opacity:0.8; 
+      color:#fff;
+            }
+        .card .choice .jifen {
+            padding-top: 8px;
+            line-height: 27px;
+            padding-bottom: 15px;
+            color: #333;
+            border-bottom: 1px solid #e5e5e5;
+             margin:0 30px 0 0px;
+        }
+
+            .card .choice .jifen .usejifen {
+                float: right;
+                margin-right: 437px;
+            }
+
+            .card .choice .jifen .input-jifen {
+                width: 70px;
+                height: 23px;
+            }
+
+        .card .choice .jfyu {
+            font-family: 'Microsoft YaHei';
+            font-size: 12px;
+            color: #000;
+            line-height: 48px;
+            padding-left: 2px;
+        }
+/*选择快递*/
+.changepay .kuaidi {
+    margin: 10px auto;
+}
+
+    .changepay .kuaidi ul li {
+        float: left;
+        width: 150px;
+        line-height: 30px;
+    }
+/*商品信息*/
+.procart .cart-first {
+    font-family: 'Microsoft YaHei';
+    font-size: 12px;
+    color: #000;
+    line-height: 40px;
+    background: #fafafa;
+}
+
+    .procart .cart-first li {
+        float: left;
+        width: 200px;
+        text-align: center;
+        font-weight: bold;
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    .procart .cart-first .first-one {
+        width: 650px;
+    }
+
+.procart .cart-second {
+}
+
+    .procart .cart-second li {
+        float: left;
+        width: 200px;
+        text-align: center;
+        line-height: 70px;
+    }
+
+    .procart .cart-second .li-width {
+        width: 650px;
+    }
+
+    .procart .cart-second .danjia {
+        font-family: 'Microsoft YaHei';
+        font-size: 13px;
+        color: #999;
+        line-height:80px;
+    }
+
+    .procart .cart-second .heji {
+        font-family: Arial;
+        font-size: 15px;
+        color: #000;
+        font-weight: bold;
+    }
+
+    .procart .cart-second a {
+        display: block;
+        float: left;
+        width: 110px;
+        margin-top: 8px;
+    }
+
+    .procart .cart-second li .li-right {
+        float: left;
+        width: 375px;
+        text-align: left;
+        font-family: SimSun;
+        font-size: 12px;
+        color: #999;
+    }
+
+        .procart .cart-second li .li-right a {
+            display: block;
+            color: #666;
+            height: 38px;
+            line-height: 38px;
+            width: 373px;
+            overflow: hidden;
+        }
+
+        .procart .cart-second li .li-right p {
+            margin-top: 18px;
+            line-height: 35px;
+        }
+
+/*已选购商品结束，总价格开始*/
+.all-border {
+    width: 100%;
+    padding: 35px 0;
+    border-bottom: 1px solid #CCC;
+}
+
+.allpro {
+    float: right;
+    width: 300px;
+    text-align: right;
+    font-family: 'Microsoft YaHei';
+    font-size: 14px;
+    color: #000;
+}
+
+    .allpro .all-1 {
+        line-height: 35px;
+    }
+
+        .allpro .all-1 .all-pri {
+            float: left;
+            width: 201px;
+            color:#333;
+        }
+
+            .allpro .all-1 .all-pri span {
+                font-size: 18px;
+                font-weight:bold;
+            }
+
+        .allpro .all-1 .all-num {
+            float: right;
+            width: 98px;
+            line-height: 35px;
+        }
+
+.procart .all-price {
+    font-family: 'Microsoft YaHei';
+    font-size: 14px;
+    color: #000;
+    text-align: right;
+    margin: 25px 0;
+}
+
+    .procart .all-price span {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .procart .all-price a {
+        display: block;
+        float: right;
+        width: 100px;
+        text-align: center;
+        color: #fff;
+        margin-left: 57px;
+        font-size: 16px;
+        line-height: 45px;
+        background: #333;
+    }
+    .procart .all-price a:hover{
+        opacity:0.8;
+    }
+
+/*弹窗显示更多收货地址*/
+.zhezhao {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(193,193,193,0.8);
+    z-index: 110;
+    padding: 0.1px;
+    display: none;
+}
+
+    .zhezhao .otheraddr {
+        width: 970px;
+        position: absolute;
+        height: 693px;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        font-family: 'Microsoft YaHei';
+        background: #fff;
+    }
+
+.otheraddr .other-top {
+    font-size: 20px;
+    color: #fff;
+    padding-left: 30px;
+    line-height: 50px;
+    background: #888;
+}
+
+    .otheraddr .other-top img {
+        float: right;
+        margin-right: 15px;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+.otheraddr .addrlist {
+    height: 500px;
+    overflow-y: scroll;padding-top: 50px;
+}
+
+    .otheraddr .addrlist .out-p {
+        position: relative;
+        width: 800px;
+        margin: 15px auto;
+        font-family: 'Microsoft YaHei';
+        border: 1px solid #ccc;
+        cursor: pointer;
+    }
+
+        .otheraddr .addrlist .out-p .onchoice-img {
+            position: absolute;
+            width: 41px;
+            height: 34px;
+            top: 74px;
+            right: 0;
+            display: none;
+        }
+
+        .otheraddr .addrlist .out-p .addr-1 {
+            font-size: 20px;
+            font-weight: bold;
+            color: black;
+            line-height: 35px;
+        }
+
+        .otheraddr .addrlist .out-p .addrmargin {
+            margin-top: 10px;
+        }
+
+        .otheraddr .addrlist .out-p .addr-1 span {
+            margin-left: 8px;
+            font-size: 12px;
+            font-weight: 100;
+        }
+
+        .otheraddr .addrlist .out-p p {
+            padding-left: 18px;
+        }
+
+        .otheraddr .addrlist .out-p .addr-2, .otheraddr .addrlist .out-p .addr-3 {
+            font-size: 14px;
+            color: #000;
+            line-height: 26px;
+        }
+
+        .otheraddr .addrlist .out-p .addr-3 {
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+.otheraddr .sure {
+    display: block;
+    width: 105px;
+    color: #fff;
+    background: black;
+    text-align: center;
+    line-height: 35px;
+    font-family: 'Microsoft YaHei';
+    font-size: 14px;
+    margin: 33px 0 33px 400px;
+}

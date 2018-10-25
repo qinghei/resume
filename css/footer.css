@@ -1,0 +1,53 @@
+/********µ×²¿*********/
+.foot{border-top:2px solid #333;margin-top:25px}
+.foot-main {
+	width:1100px; margin: 20px auto;}
+	.fm-top ul li{
+		width: 220px;
+		line-height:20px;
+		text-align: left;
+		padding-bottom: 10px;}
+	.fm-top ul li a{
+		line-height: 25px;
+		text-align:left;
+		color: #333;}
+	.fm-top ul li .li-1{float:left;margin-left:60px;}
+	.fm-top ul li .li-2{
+		font-family: 'Microsoft YaHei';
+		font-size: 16px;
+		font-weight: bold;
+		padding-left: 5px;}
+	.fm-top ul li .li-3{
+		font-family: SimSun;
+		font-size: 14px;
+		color: #323232;
+		padding-left:5px;
+		display: table-cell;}
+	.main-bottom{
+    margin-top:10px;
+    border-top:1px solid #CCC;}
+	.mb-ul{width:16.6%;
+		float: left;
+		margin-top:15px;
+		padding-left:60px;
+		box-sizing:border-box;}
+	.mb-ul li{
+		width:170px;
+		text-align:left;
+		line-height:25px; }
+	.mb-ul li a{
+		font-family: SimSun;
+		color: #333;}
+	.ul-one{
+		font-family:'Microsoft yahei';
+		font-size: 16px;
+		font-weight: bold;}
+	.foot-bottom{
+		padding-bottom:5px;
+		margin-top: 20px;
+		text-align: center;
+		line-height:2;
+		border-top: 1px solid #333;
+		background: #efefef;
+		padding-top:10px;
+}
