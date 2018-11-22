@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>购物车</title>
+  <link rel="stylesheet" href="css/cart.css">
+  <link rel="stylesheet" href="css/common.css">
+</head>
+<script src="js/jquery-1.11.3.js"></script>
+<body>
+  <!-----------头部----------->
+  <header id="header"></header>
+  <div id="sitebar"></div>
+  <!-----------主体----------->
+  <div class="main">
+    <div class="main-nav">
+      <div class="breadwrap">
+        <div class="bread w1100">
+          <a href="index.html">首页</a>
+          <span>我的购物车</span>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <!--顶部蓝色背景部分-->
+      <div class="cart">
+        <div class="mycart">我的购物车</div>
+        <div class="step1 step-margin">
+          <a class="step-left"><img src="image/cartico_10.png"></a>
+          <div class="step-right">
+            <span>STEP 01</span>
+            <span>我的购物车</span>
+          </div>
+        </div>
+        <div class="step1 step3">
+          <a class="step-left"><img src="image/cartico_06.png"></a>
+          <div class="step-right">
+            <span>STEP 02</span>
+            <span>确认订单信息</span>
+          </div>
+        </div>
+        <div class="step1 step3">
+          <a class="step-left"><img src="image/cartico_02.png"></a>
+          <div class="step-right">
+            <span>STEP 03</span>
+            <span>成功提交订单</span>
+          </div>
+        </div>
+        <div class="step1 step4">
+          <a class="step-left"><img src="image/cartico_04.png"></a>
+          <div class="step-right">
+            <span>STEP 04</span>
+            <span>订单支付</span>
+          </div>
+        </div>
+        <br class="clear">
+      </div>
+      <table class="cart_main clearfix">
+        <thead>
+          <tr class="bg-f2">
+            <th><input type="checkbox" id="headall" onclick="CheckAll(this);" checked="checked"></th>
+            <th class="allchange">全选</th>
+            <th>单价</th>
+            <th>数量</th>
+            <th>合计</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr id="27303" goodid="1456">
+            <td><input type="checkbox" checked="checked"></td>
+            <td>
+              <a href="/Product/Detail?id=1168" target="_blank" title="乐扣乐扣便携橡胶提手水杯（棕色/绿色/紫色 550ML）" class="img-a" goodid="1456"><img class="fl" src="image/201606211724015394.jpg" width="60" height="60"></a>
+              <div class="td_center clearfix">
+                <a href="/Product/Detail?id=1168" target="_blank" title="乐扣乐扣便携橡胶提手水杯（棕色/绿色/紫色 550ML）">乐扣乐扣便携橡胶提手水杯（棕色/绿色/紫色 550ML） &nbsp;<span> 新品上市</span></a>
+                <input type="text" placeholder="浅绿色  " readonly="true">
+                <a href="javascript:;" class="mycart_but" alt="1168" goodcarid="27303"><img src="image/mycart_10.png"></a>
+                <div class="tb-bottom clearfix"></div>
+              </div>
+            </td>
+            <td>
+              <p>￥ <span class="proprice" id="price27303">43.20</span></p>
+            </td>
+            <td class="clearfix">
+              <div class="add_num">
+                <a class="countdown" href="javascript:void(0);"><img src="image/mycart_06.jpg"></a>
+                <span class="count-number">1</span>
+                <a class="countup" href="javascript:void(0);"><img src="image/mycart_08.png"></a>
+              </div>
+            </td>
+            <td class="add">￥ <span>43.20</span></td>
+            <td class="last_del">
+              <a class="move_add" href="javascript:addCollInfo(37277,1168,true)">移入收藏</a>
+              <a class="delete" href="javascript:void(0);" onclick="Delete(1456, this);">删除</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="bottom_cart clearfix">
+          <input type="checkbox" onclick="CheckAll(this)" id="footall" checked="checked">
+          <span class="all_delete">全选</span>
+          <span class="all_delete" onclick="deleteTr()">删除选中的商品</span>
+          <span class="pro_changes">已选择1件商品</span>
+          <span class="pro_change">总价（不含运费）:</span>
+          <span class="cart_price">￥43.20</span>
+          <a class="count_add" href="javascript:void(0);">去结算</a>
+      </div>
+  </div>
+  </div>
+  <!--------底部----------->
+	<footer id="footer"></footer>
+	<script src="js/jquery-1.11.3.js"></script>
+	<script src="js/header.js"></script>
+	<script src="js/footer.js"></script>
+</body>
+</html>

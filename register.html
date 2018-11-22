@@ -1,0 +1,191 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>这是标题</title>
+		<style type="text/css">	
+			table{
+				border:1px solid #ddd;
+				width:800px;
+				margin:0 auto;
+				padding-bottom: 30px;
+			}
+			table tr td{
+				text-align:center;
+			}
+			.logo{
+				margin-left: 235px;
+				margin-top: 20px;
+		}
+		.logo-text{
+				margin-left: 350px;
+				margin-top: -50px;
+		}
+		.bottom{
+			padding-bottom:5px;
+			margin-top: 200px;
+			text-align: center;
+			line-height:2;
+			border-top: 1px solid #333;
+			background: #efefef;
+			padding-top:10px;
+			font-size: 12px;
+			}
+		a{text-decoration: none;}
+		a:hover {color: #0068b7;}
+		table tr td p {
+		  font-size: 14px;
+			margin-left: -190px;
+			margin-bottom: 3px;
+		}
+		table tr td div {
+		 margin-top: 10px;
+     font-size: 14px;
+     margin-left: 5px;
+     margin-bottom: 10px;
+		}
+		 .input_text{
+		 width: 260px;
+		 height: 30px;
+		 border: 1px solid #cccccc;
+		}
+		.input_button{
+		  width: 262px;
+			height: 35px;
+			margin-right: 35px;
+			text-align: center;
+			font-size: 14px;
+			background-color: #ffffff;
+			border: 1px solid #000000;
+			margin-left: 40px;
+		}
+		</style>		
+	</head>
+	<body>
+		<!-----------头部--------------->
+		<div>
+			<div class="logo">
+				<a href="index.html"><img src="image/201511051757169902.png"></a>
+			</div>			
+			<div class="logo-text">
+				www.locknlockmall.com.cn<br>
+				<span>乐扣乐扣网上官方商城</span>
+			</div>
+		</div>
+		<!-------------中部-------------------->
+		<table>
+			<tr>
+				<td style="height:40px;color:#fff;background:#000">乐扣乐扣官方商城会员注册</td>
+			</tr>
+			<tr>
+				<td>
+					<p>*用户名：</p>
+					<input class="input_text" type="text" id="uname" onblur="checkUname()">
+					<span id="showUname"></span>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>*手机：</p>
+					<input class="input_text" type="text" id="phone">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>*邮箱：</p>
+					<input class="input_text" type="email" id="email">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>*密码：</p>
+					<input class="input_text" type="password" id="upwd">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>*确认密码：</p>
+					<input class="input_text" type="password" id="cpwd">
+					<span id="csmg"></span>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div><input  type="checkbox">点击注册，表示您同意乐扣乐扣服务协议<div/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input class="input_button" type="button" value="立即注册" onclick="reg()">
+				</td>
+			</tr>
+		</table>
+		<script src="common.js"></script>
+		<script>
+		/*********确认用户名是否重复**********/
+			var isReg=false;//全局变量
+			function checkUname(){
+				var xhr=createXhr();
+				xhr.onreadystatechange=function(){
+				if(xhr.readyState==4&&xhr.status==200){
+					var res=xhr.responseText;
+					if(res=="1"){
+						$("showUname").innerHTML="用户已存在";
+						isReg=false;
+					}else if(res=="0"){
+						$("showUname").innerHTML="用户名可用";
+						isReg=true;
+					}
+				}
+			}
+			//打开连接
+			var uname=$('uname').value;
+			xhr.open('get',"/user/checkUname?uname="+uname,true);
+			//发送请求
+			xhr.send(null);
+			}
+			function reg(){
+				if(isReg==true){
+					//异步注册			
+					var xhr=createXhr();
+					xhr.onreadystatechange=function(){
+						if(xhr.readyState==4&&xhr.status==200){
+							var res=xhr.responseText;
+							alert(res);
+							location.href='http://localhost:3000/login.html'
+						}
+					}					
+					xhr.open("post","/user/register",true);
+					xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+					var uname=$("uname").value;
+					var upwd=$("upwd").value;
+					var cpwd=$("cpwd").value;
+						if(upwd!=cpwd){
+							$("csmg").innerHTML="请保持密码一致";
+							isReg=false;
+							reg();
+							return false;
+						}					
+					var email=$("email").value;
+					var phone=$("phone").value;
+					var url="uname="+uname+"&phone="+phone+"&email="+email+"&upwd="+upwd;
+					xhr.send(url);
+				}else{
+					alert("请检查注册信息");
+				}
+			}
+	
+		</script>
+		<!-----------------底部----------------->
+		<div class="bottom">
+			沪ICP备13029983号<br>
+			上海乐扣乐扣贸易有限公司 版权所有<br>
+			本商店顾客个人信息将不会被泄漏给其他任何机构和个人<br>
+			本商店logo和图片都已经申请保护，不经授权不得使用
+			<span><a href="#"><img src="image/pic1.gif"></a></span>
+			<br />
+			<a href="#"><img src="image/shgs.gif" height="20">
+			<a href="#"><img src="image/hgwb.png"></a>
+		</div>
+	</body>
+</html>

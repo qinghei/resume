@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    ul{list-style:none;}
+      .sitebarwrap{height:100%;width:0;}
+      .siteBar{background-color:#ededed;position:fixed;right:0;top:0;z-index:99;height:100%}
+         .siteBarNav{width:44px;height:100%;position:relative;border-right:1px solid #dedede;}
+         .siteBarNav .siteLogo{display:block;height:42px;background:url(../image/sitebarlogo.png) center center no-repeat; border-bottom: 1px solid #dedede;margin-top: 277.5px;}
+         .siteBarNav .siteGotop{margin-top: 420px;display:block;width:44px;height:42px;background:url(../image/siteGotop.png) center center no-repeat; position: absolute;left:0; }
+         .siteBarNav li{position:relative;float:none;}
+         .siteBarNav li span{display:none;position:absolute; width: 90px; height: 44px; line-height: 44px; font-size: 14px; text-align: center; background-color: #0068b7; color: #fff; left: -90px; top: 0; border-right: 1px solid #fff; }
+         .siteBarNav li a{display: block; height: 44px; background-repeat: no-repeat;background-position:center center; border-bottom: 1px solid #dedede; }
+         .siteBarNav li a:hover{background-color: #0068b7; }
+         .siteBarNav li a.siteCart{background-image: url(../image/cart002.png);}
+         .siteBarNav li a.siteCoupon {background-image: url(../image/siteCoupon.png);}
+         .siteBarNav li a.siteCollect {background-image: url(../image/siteCollect.png);}
+         .siteBarNav li a.siteFoot{background-image: url(../image/siteFoot.png); }
+         .siteBarNav li a.siteQrcode{background-image: url(../image/siteQrcode.png);} 
+  </style>
+</head>
+<body>
+  <!----------网站右侧导航栏-------->
+  <div class="sitebarwrap" id="sitebar">
+      <div class="siteBar">
+        <div class="siteBarNav fl">
+          <span class="siteLogo"></span>
+          <ul>
+            <li>
+              <a href="#" class="siteCart" title="购物车"></a>
+              <span>我的购物车</span>
+            </li>
+            <li>
+              <a href="#" class="siteCoupon" title="优惠券"></a>
+              <span>我的优惠券</span>
+            </li>
+            <li>
+              <a href="#" class="siteCollect" title="收藏"></a>
+              <span>我的收藏</span>
+            </li>
+            <li>
+              <a href="#" class="siteFoot" title="足迹"></a>
+              <span>我的足迹</span>
+            </li>									
+          </ul>
+          <div class="clear"></div>
+          <a href="#" class="siteGotop" title="返回顶部"></a>
+        </div>
+        <!--<div class="siteBarMain fl">
+          <div class="siteListTitle"><img src="image/siteHide.png"><a href="#"></a></div>
+          <div class="siteList">
+            <div class="plist">
+            </div>
+          </div>
+        </div>
+        -->
+        <br class="clear">
+      </div>
+  </div>
+</body>
+</html>

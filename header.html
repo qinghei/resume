@@ -1,0 +1,447 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>这是标题</title>
+		<link rel="stylesheet" href="css/header.css">
+		<link rel="stylesheet" href="css/common.css">
+		<style type="text/css">		
+		</style>		
+	</head>
+	<body>	
+		<div class="head" id="header">
+			<div class="head-top">
+						<div class="ht">
+							<div class="ht-left" v-if="!islogin" id="signout">
+								<span><a href="login.html">欢迎来到乐扣乐扣 请登录</a></span>
+								<span><a id="btnLogin" :href="signin">免费注册</a></span>
+							</div>
+							<div class="ht-left" v-else id="signin">
+									<a href="#">Welcome <span id="uname" v-text="uname">tom</span></a>
+									<a id="btnSignout" href="javascript:;" @click.prevent="signout()">注销</a>
+							</div>
+							<div class="ht-right">								
+								<ul>
+									<li><a href="#">我的订单</a></li>
+									<li><a href="#">会员中心</a></li>
+									<li><a href="#"><span><img src="image/header/ico_04.png"></span>手机乐扣</a></li>
+									<li class="serv"><a href="#">客户服务</a></li>
+								</ul>
+							</div>
+						</div>				
+			</div>
+			<br class="clear">
+			<div class="head-main">
+						<div class="hm">
+							<div class="hm-left">
+									<a href="index.html">
+										<img src="image/header/201511051757169902.png">
+									</a>
+							</div>
+							<div class="hm-center">
+									<div class="hc-top">
+											<input type="text" id="searchInput" v-model="kword" @keyup.13="search()">
+											<div id="searchBtn"><img src="image/header/ico_10.jpg" @click="search()"></div>
+									</div>
+									<div class="clear"></div>
+									<div class="hc-bottom">
+										<ul>
+											<li class="hot">热门搜索:</li>
+											<li><a href="#">水壶</a></li>
+											<li><a href="#">新品</a></li>
+											<li><a href="#" >乐扣</a></li>
+										</ul>
+										<br class="clear">
+									</div>
+							</div>
+							<div class="hm-right">
+								<div class="hr">
+									<span>
+										<a href="#"><img src="image/header/ico_12.png" /><span>活动</span></a>
+									</span>
+									<span>
+										<a href="#"><img src="image/header/ico_14.png" /><span>会员</span></a>
+									</span>
+									<span>
+										<a href="#"><img src="image/header/ico_16.png" /><span>签到</span></a>
+									</span>
+									<span class="mycart">
+										<a href="#"><img src="image/header/cart001.png" /><span>购物车</span></a>
+										<b class="cartcount">1</b>
+									</span>
+									<br class="clear">
+								</div>                
+							</div>
+						</div>
+						<br class="clear">
+			</div>
+			<div class="head-bottom">
+				<div class="head-nav">
+					<ul>
+						<li class="allType"><a href="index.html" class="active">全部商品分类</a>
+							<div class="popUpBox">
+									<div class="pub-left">
+										<ul>
+											<li><a href="#" class="active">
+													<div><img src="image/header/201603221757168907.png"></div> <span>密封容器</span>
+											</a></li>
+											<li><a href="#" class="active">
+													<div><img src="image/header/201603221604506081.png"></div> <span>水瓶/水杯</span>
+											</a></li>
+											<li><a href="#" class="active">
+													<div><img src="image/header/201603221605373646.png"></div> <span>厨房用品</span>
+											</a></li>
+											<li><a href="#" class="active">
+													<div><img src="image/header/201603221605049980.png"></div> <span>生活日用</span>
+											</a></li>
+											<li><a href="#" class="active">
+													<div><img src="image/header/201603221606111497.png"></div> <span>户外用品</span>
+											</a></li>		
+											<li><a href="#" class="active">
+													<div><img src="image/header/201603221611094769.png"></div> <span>生活家电</span>
+											</a></li>	
+											<li><a href="#" class="active">
+													<div><img src="image/header/201603221605176173.png"></div> <span>卡通/幼儿</span>
+											</a></li>	
+											<li><a href="#" class="active">
+													<div><img src="image/header/201603221606410637.png"></div> <span>盖子及配件</span>
+											</a></li>
+										</ul>
+									</div>
+									<div class="allType-right">
+										<div class="pub-center">
+											<div class="items">
+												<div class="t-head"><a href="#"> 塑料 </a></div>
+												<div>
+													<a href="#">四面锁扣 </a> <span >|</span> <a href="#">旋转锁扣</a> <span >|</span> 
+													<a href="#">简易型 </a> <span >|</span> <a href="#">其他 </a>
+												</div>
+											</div>
+											<div class="items ">
+												<div class="t-head"><a href="# 66"> 玻璃 </a></div>
+												<div >
+													<a  href="#">四面锁扣 </a> <span>|</span> <a  href="#">旋转锁扣</a> <span >|</span>
+													<a href="#">简易型 </a> <span >|</span> <a href="#">其他 </a>
+												</div>
+											</div>
+											<div class="items">
+												<div class="t-head"><a href="#"> 陶瓷 </a></div>
+												<div ><a  href="#">四面锁扣 </a></div>
+											</div>
+											<div class="items">
+												<div class="t-head"><a href="#"> 野餐便当盒 </a></div>
+												<div >
+													<a href="#">塑料 </a> <span>|</span> <a href="#">玻璃 </a> <span >|</span> 
+													<a href="#">陶瓷 </a> <span>|</span> <a href="#">保温 </a>
+												</div>
+											</div>
+										</div>
+										<div class="pub-right">
+											<p class="title ">相关品牌</p>
+											<div class="brands">
+												<div class="items">
+													<div><a href="#"> <img src="image/header/201511071557514945.jpg"></a></div>
+													<p><a href="#">冰箱门整理容器</a></p>
+												</div>
+												<div class="items">
+													<div><a href="#"> <img src="image/header/201511071556011778.jpg"></a></div>
+													<p><a href="#">旋盖密封容器</a></p>
+												</div>
+												<div class="items">
+													<div><a href="#"> <img src="image/header/201511071554011888.jpg"></a></div>
+													<p><a href="#">便当盒</a></p>
+												</div>
+												<div class="items">
+													<div><a href="#"> <img src="image/header/201511071549441945.jpg"></a></div>
+													<p><a href="#">四面锁扣简便容器</a></p>
+												</div>
+											</div>
+										</div>			
+									</div>
+									<div class="allType-right">
+										<div class="pub-center">
+											<div class="items">
+												<div class="t-head"><a href="#"> 便携水杯 </a></div>
+												<div>
+													<a href="#">塑料 </a> <span>|</span> <a href="#">耐热玻璃 </a> <span >|</span> 
+													<a href="#">普通玻璃 </a> <span>|</span> <a  href="#">不锈钢 </a>
+												</div>
+											</div>
+											<div class="items">
+												<div class="t-head"><a href="#"> 保温/保冷杯 </a></div>
+												<div>
+													<a href="#">便携式 </a> <span>|</span> <a href="#">一键式 </a> <span >|</span> 
+													<a href="#">手柄式 </a> <span>|</span> <a href="#">水壶 </a>
+												</div>
+											</div>
+											<div class="items">
+												<div class="t-head"><a href="#"> 家用水杯 </a></div>
+												<div >
+													<a href="#">塑料 </a> <span>|</span> <a href="#">耐热玻璃 </a> <span >|</span> 
+													<a href="#">普通玻璃 </a> <span>|</span><a href="#">不锈钢 </a>
+												</div>
+											</div>
+											<div class="items">
+													<div class="t-head"><a href="#"> 茶杯/马克杯 </a></div>
+													<div >
+														<a href="#">陶瓷 </a> <span>|</span> <a href="#">塑料 </a> <span >|</span> 
+														<a href="#">耐热玻璃 </a> <span>|</span><a href="#">普通玻璃 </a>
+													</div>
+											</div>
+										</div>
+										<div class="pub-right">
+											<p class="title">相关品牌</p>
+												<div class="brands">
+													<div class="items">
+														<div><a href="#"> <img src="image/header/201511071545302160.jpg"></a></div>
+														<p><a href="#">冰箱门整理容器</a></p>
+													</div>
+													<div class="items">
+														<div><a href="#"> <img src="image/header/201511071544361514.jpg"></a></div>
+														<p><a href="#">旋盖密封容器</a></p>
+													</div>
+													<div class="items">
+														<div><a href="#"> <img src="image/header/201511071543341959.jpg"></a></div>
+														<p><a href="#">便当盒</a></p>
+													</div>
+													<div class="items">
+														<div><a href="#"> <img src="image/header/201511071552271383.jpg"></a></div>
+														<p><a href="#">四面锁扣简便容器</a></p>
+													</div>		
+												</div>
+										</div>
+									</div>
+									<div class="allType-right">
+										<div class="pub-center">
+											<div class="items">
+												<div class="t-head"><a href="#"> 煎锅/炒锅 </a></div>
+												<div ></div>
+											</div>
+											<div class="items">
+												<div class="t-head"><a href="#"> 汤锅/蒸格 </a></div>
+												<div>
+													<a href="#">单柄汤锅</a><span>|</span><a href="#">双耳汤锅</a> <span>|</span> <a href="#">蒸格 </a>
+												</div>
+											</div>
+											<div class="items">
+												<div class="t-head"><a href="#"> 烤箱容器 </a></div>
+												<div>
+													<a href="#">刀/剪刀</a><span>|</span><a href="#">不锈钢</a> <span>|</span> <a href="#">陶瓷 </a>
+												</div>
+											</div>
+											<div class="items">
+												<div class="t-head"><a href="#"> 砧板 </a></div>
+												<div>
+													<a href="#">普通</a><span>|</span><a href="#">竹制</a> <span>|</span> <a href="#">抗菌 </a>
+												</div>
+											</div>
+											<div class="items">
+												<div class="t-head"><a href="#"> 厨房用具 </a></div>
+												<div></div>
+											</div>	
+											<div class="items">
+												<div class="t-head"><a href="#"> 其他厨用小件 </a></div>
+												<div></div>
+											</div>		
+											<div class="items">
+												<div class="t-head"><a href="#"> 餐具 </a></div>
+												<div></div>
+											</div>	
+											<div class="items">
+												<div class="t-head"><a href="#"> 咖啡用品 </a></div>
+												<div></div>
+											</div>								
+										</div>
+										<div class="pub-right">
+											<p class="title">相关品牌</p>
+												<div class="brands">
+													<div class="items">
+														<div><a href="#"> <img src="image/header/201511071602439120.jpg"></a></div>
+														<p><a href="#">冰箱门整理容器</a></p>
+													</div>
+													<div class="items">
+														<div><a href="#"> <img src="image/header/201511071539391243.jpg"></a></div>
+														<p><a href="#">便当盒</a></p>
+													</div>
+													<div class="items">
+														<div><a href="#"> <img src="image/header/201511071601019862.jpg"></a></div>
+														<p><a href="#">四面锁扣简便容器</a></p>
+													</div>
+												</div>
+										</div>
+									</div>
+									<div class="allType-right">
+										<div class="pub-center">
+											<div class="items">
+												<div class="t-head"><a href="#"> 拉杆箱 </a></div>
+												<div ></div>
+											</div>
+											<div class="items">
+												<div class="t-head"><a href="#"> 旅行用品 </a></div>
+												<div ></div>
+											</div>
+											<div class="items">
+												<div class="t-head"><a href="#"> 野营/野餐用品 </a></div>
+												<div></div>
+											</div>		
+										</div>
+										<div class="pub-right">
+											<p class="title">相关品牌</p>
+											<div class="brands ">
+													<div class="items">
+														<div><a href="#"> <img src="image/header/201511071555043006.jpg"></a></div>
+														<p><a href="#">冰箱门整理容器</a></p>
+													</div>
+													<div class="items">
+														<div><a href="#"> <img src="image/header/201511071547477681.jpg"></a></div>
+														<p><a href="#">旋盖密封容器</a></p>
+													</div>
+													<div class="items">
+														<div><a href="#"> <img src="image/header/201511062030015439.jpg"></a></div>
+														<p><a href="#">便当盒</a></p>
+													</div>
+													<div class="items">
+														<div><a href="#"> <img src="image/header/201511071545302160.jpg"></a></div>
+														<p><a href="#">四面锁扣简便容器</a></p>
+													</div>
+											</div>
+										</div>
+									</div>
+									<div class="allType-right">
+										<div class="pub-center">
+											<div class="items"><div class="t-head"><a href="#"> 厨房小家电 </a></div><div></div></div>
+											<div class="items"><div class="t-head"><a href="#"> 生活小家电 </a></div><div></div></div>
+										</div>
+										<div class="pub-right">
+											<p class="title">相关品牌</p>
+											<div class="brands">
+												<div class="items">
+													<div><a href="#"> <img src="image/header/201511071557514945.jpg"></a></div>
+													<p><a href="#">冰箱门整理容器</a></p>
+												</div>
+												<div class="items">
+													<div><a href="#"> <img src="image/header/201511071600160938.jpg"></a></div>
+													<p><a href="#">四面锁扣简便容器</a></p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="allType-right">
+										<div class="pub-center">
+											<div class="items">
+												<div class="t-head"><a href="#"> 储存容器 </a></div>
+												<div >
+													<a href="#">Hello Bebe </a> <span >|</span> <a href="#">Hello Kitty </a> <span>|</span>
+													<a  href="#">Disney </a> <span>|</span> <a  href="#">Marvel </a> <span >|</span>
+													<a  href="#">Snoopy </a> <span >|</span> <a  href="#">Lock&amp;Lock </a>
+												</div>
+											</div>
+											<div class="items">
+												<div class="t-head"><a href="#"> 水瓶/水杯 </a></div>
+												<div >
+													<a href="#">Hello Bebe </a> <span >|</span> <a href="#">Hello Kitty </a> <span>|</span>
+													<a  href="#">Disney </a> <span>|</span> <a  href="#">Marvel </a> <span >|</span>
+													<a  href="#">Snoopy </a> <span >|</span> <a  href="#">Lock&amp;Lock </a>
+												</div>
+											</div>
+											<div class="items">
+												<div class="t-head"><a href="#"> 餐具 </a></div>
+												<div >
+													<a href="#">Hello Bebe </a> <span >|</span> <a href="#">Hello Kitty </a> <span>|</span>
+													<a  href="#">Disney </a> <span>|</span> <a  href="#">Marvel </a> <span >|</span>
+													<a  href="#">Snoopy </a> <span >|</span> <a  href="#">Lock&amp;Lock </a>
+												</div>
+											</div>
+											<div class="items">
+												<div class="t-head"><a href="#"> 收纳用品 </a></div>
+												<div >
+													<a href="#">Hello Bebe </a> <span >|</span> <a href="#">Hello Kitty </a> <span>|</span>
+													<a  href="#">Disney </a> <span>|</span> <a  href="#">Marvel </a> <span >|</span>
+													<a  href="#">Snoopy </a> <span >|</span> <a  href="#">Lock&amp;Lock </a>
+												</div>
+											</div>
+											<div class="items">
+												<div class="t-head"><a href="#"> 哺乳用品 </a></div>
+												<div >
+													<a href="#">Hello Bebe </a> <span >|</span> <a href="#">Hello Kitty </a> <span>|</span>
+													<a  href="#">Lock&amp;Lock</a>
+												</div>
+											</div>
+											<div class="items">
+												<div class="t-head"><a href="#"> 卫生用品 </a></div>
+												<div >
+													<a href="#">Hello Bebe </a> <span >|</span> <a href="#">Hello Kitty </a> <span>|</span>
+													<a  href="#">Lock&amp;Lock</a>
+												</div>
+											</div>
+											<div class="items">
+												<div class="t-head"><a href="#"> 地垫 </a></div>
+												<div><a href="#">Hello Bebe </a> ></div>
+											</div>
+											<div class="items ">
+												<div class="t-head"><a href="#"> 其他 </a></div>
+												<div ><a href="#">Lock&amp;Lock </a> <span >|</span> <a  href="#">Hello Kitty </a></div>
+											</div>
+										</div>
+										<div class="pub-right">
+											<p class="title">相关品牌</p>
+											<div class="brands">
+													<div class="items">
+														<div><a href="#"> <img src="image/header/201511071532472178.jpg"></a></div>
+														<p><a href="#">冰箱门整理容器</a></p>
+													</div>
+													<div class="items">
+														<div><a href="#"> <img src="image/header/201511071536026785.png"></a></div>
+														<p><a href="#">旋盖密封容器</a></p>
+													</div>
+													<div class="items">
+														<div><a href="#"> <img src="image/header/201511071543341959.jpg"></a></div>
+														<p><a href="#">便当盒</a></p>
+													</div>
+													<div class="items">
+														<div><a href="#"> <img src="image/header/201511071555043006.jpg"></a></div>
+														<p><a href="#">四面锁扣简便容器</a></p>
+													</div>
+											</div>
+										</div>
+									</div>
+									<div class="allType-right">
+										<div class="pub-center">
+											<div class="items"><div class="t-head"><a href="#"> 密封容器盖 </a></div><div ></div></div>
+											<div class="items"><div class="t-head"><a href="#"> 水杯盖 </a></div><div ></div></div>
+											<div class="items"><div class="t-head"><a href="#"> 锅盖 </a></div><div ></div></div>
+											<div class="items"><div class="t-head"><a href="#"> 保温/保冷杯盖 </a></div><div ></div></div>
+											<div class="items"><div class="t-head"><a href="#"> 其他配件 </a></div><div ></div></div>	
+										</div>
+										<div class="pub-right">
+											<p class="title">相关品牌</p>
+											<div class="brands">
+												<div class="items">
+													<div><a href="#"> <img src="image/header/201511071602134421.jpg"></a></div>
+													<p><a href="#">冰箱门整理容器</a></p>
+												</div>
+												<div class="items">
+													<div><a href="#"> <img src="image/header/201511071606311551.jpg"></a></div>
+													<p><a href="#">旋盖密封容器</a></p>
+												</div>
+											</div>
+										</div>
+									</div>
+							</div>
+						</li>
+						<li><a target="_self" href="newproduct.html">新品上市</a></li>
+						<li><a target="_self" href="activity.html">活动专区</a></li>
+						<li><a target="_self" href="favorable.html">闪惠专区</a></li>
+						<li><a href="#">热销排行</a></li>
+						<li><a href="#">F2C</a></li>
+						<li><a target="_self" href="life.html">生活百科</a></li>
+					</ul>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+		<script src="js/jquery-1.11.3.js"></script>
+		<script src="js/style.js"></script>
+		<script src="js/vue.js"></script>	
+	</body>
+</html>

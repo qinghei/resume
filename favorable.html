@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/favorable.css">
+  <title>Document</title>
+</head>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/header.js"></script>
+<script src="js/footer.js"></script>
+<body>
+  <!--------头部----------->
+  <header id="header"></header>
+  <div id="sitebar"></div>
+  <!--------主体----------->
+  <div class="breadwrap">
+    <div class="bread w1100"><a href="localhost:3000/index.html">首页</a><span>闪惠专区</span></div>
+  </div>
+  <div class="container">
+    <div class="shbanner"><a><img src="image/favorable/201511090013199934.png"></a></div>
+    <div class="imgborder">
+      <!--正在进行-->
+      <div class="shnow">
+        <div class="now-left"></div>
+        <div class="now-center">正在进行</div>
+        <div class="now-right"></div>
+        <br class="clear">
+      </div>
+      <!-- 满屏产品-->
+      <div class="fullproduct">
+        <div class="full-left">
+          <a href="#"><img src="image/favorable/201806251619464439.jpg"></a>
+        </div>
+        <div class="full-right">
+          <div class="right-content">
+            <p class="rc-first">
+              <lu><a class="cutter" href="/product/Detail?id=732">乐扣乐扣不锈钢纤巧茶杯(300ml)</a></lu>
+            </p>
+            <p class="rc-second">活动时间：2018.10.16-10.31</p>
+            <p class="rc-three"><span class="three-num">6.0</span><span class="three-font">折</span></p>  
+            <div class="suggestPrice-container pl0">
+              <del>
+                <div class="suggestPrice-label">建议零售价</div><div>￥108.00</div>
+              </del>
+            </div>
+            <div class="price-container pl0">
+              <div class="price-label">售　　　价</div><div class="price-text">￥64.80</div>
+            </div>
+            <p class="rc-six clear"><span class="six-left">计划库存：80</span>
+              <span class="six-right">现有库存：943</span></p>
+            <p class="rc-seven">
+              <a href="#" class="seven-left">
+                <img src="image/favorable/shico_04.png"><span>分享</span>
+              </a>
+              <a href="javascript:addCollInfo($('#hidUserID').val(),732,true)" class="seven-right">
+                <img src="image/favorable/ico_28.png"><span>收藏</span>
+              </a>
+            </p>
+            <script type="text/javascript">
+              setInterval(function () {
+                var date = new Date();
+                var EndTime = new Date('2018/10/31 23:59:00'); //截止时间 传数据
+                if (EndTime >= date) {//是否判断结束时间
+                  var NowTime = new Date();
+                  var t = EndTime.getTime() - NowTime.getTime();
+                  var d = Math.floor(t / 1000 / 60 / 60 / 24);
+                  var h = Math.floor(t / 1000 / 60 / 60 % 24);
+                  var m = Math.floor(t / 1000 / 60 % 60);
+                  var s = Math.floor(t / 1000 % 60);
+                  var timeStr = "剩余" + d + "天" + h + "时" + m + "分" + s + "秒";
+                  document.getElementById('endTime1567').innerHTML = timeStr;
+                } else {document.getElementById('endTime1567').innerHTML = "已结束";}
+              }, 1000);
+            </script>
+            <p class="rc-eight" id="endTime1567">剩余2天1时37分18秒</p>
+            <p class="rc-nine">
+              <a href="javascript:void(0);" class="nine-left" data-id="732">加入购物车</a>
+              <a href="javascript:void(0);" class="nine-right" data-id="732">立即购买</a>
+              <br class="clear">
+            </p>
+            <br class="clear">
+          </div>
+        </div>
+        <br class="clear">
+      </div>                
+      <!--并列产品-->
+      <div class="bothproduct">
+        <!--1-->
+        <div class="bpro-left">
+          <a href="#" class="bpleft-top">
+            <img src="image/favorable/201806251620387894.jpg" >
+          </a>
+          <div class="bpleft-bottom">
+            <div class="bottom-content">
+              <p class="bb-first"><lu><a class="cutter" href="#">乐扣乐扣Bisfree抗菌塑料保鲜盒5件套</a></lu></p>
+              <div class="content-left">
+                <p class="bbc-first"><span class="bbcf-num">4.0</span><span class="bbcf-font">折</span></p>
+                <div class="suggestPrice-container pl0">
+                  <del>
+                    <div class="suggestPrice-label">建议零售价</div>
+                    <div>￥498.00</div>
+                  </del>
+                </div>
+                <div class="price-container pl0">
+                  <div class="price-label">售　　　价</div><div class="price-text">￥199.20</div>
+                </div>
+                <p class="bbc-four clear">
+                  <span class="four-left">计划库存：30</span><span class="four-right">现有库存：489</span>
+                </p>
+                <p class="bbc-five">
+                  <a href="#" class="five-left">
+                    <img src="image/favorable/shico_04.png"><span>分享</span>
+                  </a>
+                  <a href="javascript:addCollInfo($('#hidUserID').val(),2370,true)" class="five-right">
+                    <img src="image/favorable/ico_28.png"><span>收藏</span>
+                  </a>
+                </p>
+              </div>
+              <div class="content-right">
+                <script type="text/javascript">
+                                            setInterval(function () {
+                                                var date = new Date();
+                                                var EndTime = new Date('2018/10/31 23:59:00'); //截止时间 传数据
+                                                if (EndTime >= date) {//是否判断结束时间
+                                                    var NowTime = new Date();
+                                                    var t = EndTime.getTime() - NowTime.getTime();
+                                                    var d = Math.floor(t / 1000 / 60 / 60 / 24);
+                                                    var h = Math.floor(t / 1000 / 60 / 60 % 24);
+                                                    var m = Math.floor(t / 1000 / 60 % 60);
+                                                    var s = Math.floor(t / 1000 % 60);
+
+                                                    var timeStr = "剩余" + d + "天" + h + "时" + m + "分" + s + "秒";
+                                                    document.getElementById('endTime1568').innerHTML = timeStr;
+                                                }
+                                                else {
+                                                    document.getElementById('endTime1568').innerHTML = "已结束";
+                                                }
+                                            }, 1000);
+                </script>
+                <p class="cr-first" id="endTime1568">剩余2天1时37分18秒</p>
+                <p class="cr-second">
+                  <a href="javascript:void(0);" class="second-left" data-id="2370">
+                    <img src="image/favorable/ico_18.png"><span>加入购物车</span>
+                  </a>
+                  <a href="javascript:void(0);" class="second-right" data-id="2370">立即购买</a>
+                </p>
+              </div>
+              <br class="clear">
+            </div>
+          </div>
+        </div>                      
+        <div class="bpro-left">
+          <a href="#" class="bpleft-top">
+            <img src="image/favorable/201806251622342307.jpg" >
+          </a>
+          <div class="bpleft-bottom">
+            <div class="bottom-content">
+              <p class="bb-first">
+                <lu ><a class="cutter" href="#">乐扣乐扣大象印花百纳箱3件套</a></lu>
+              </p>
+              <div class="content-left">
+                <p class="bbc-first"><span class="bbcf-num">5.0</span><span class="bbcf-font">折</span></p>
+                <div class="suggestPrice-container pl0">
+                  <del>
+                    <div class="suggestPrice-label">建议零售价</div>
+                    <div>￥489.00</div>
+                  </del>
+                </div>
+                <div class="price-container pl0">
+                  <div class="price-label">售　　　价</div>
+                  <div class="price-text">￥244.50</div>
+                </div>
+                <p class="bbc-four clear">
+                  <span class="four-left">计划库存：8</span>
+                  <span class="four-right">现有库存：56</span>
+                </p>
+                <p class="bbc-five">
+                  <a href="#" class="five-left">
+                    <img src="image/favorable/shico_04.png"><span>分享</span>
+                  </a>
+                  <a href="javascript:addCollInfo($('#hidUserID').val(),1270,true)" class="five-right">
+                    <img src="image/favorable/ico_28.png"><span>收藏</span>
+                  </a>
+                </p>
+              </div>
+              <div class="content-right">
+                <script type="text/javascript">
+                  setInterval(function () {
+                    var date = new Date();
+                      var EndTime = new Date('2018/10/31 23:59:00'); //截止时间 传数据
+                      if (EndTime >= date) {//是否判断结束时间
+                        var NowTime = new Date();
+                        var t = EndTime.getTime() - NowTime.getTime();
+                        var d = Math.floor(t / 1000 / 60 / 60 / 24);
+                        var h = Math.floor(t / 1000 / 60 / 60 % 24);
+                        var m = Math.floor(t / 1000 / 60 % 60);
+                        var s = Math.floor(t / 1000 % 60);                                      
+                        var timeStr = "剩余" + d + "天" + h + "时" + m + "分" + s + "秒";
+                        document.getElementById('endTime1570').innerHTML = timeStr;
+                      }else {document.getElementById('endTime1570').innerHTML = "已结束";}
+                    }, 1000);
+                </script>
+                <p class="cr-first" id="endTime1570">剩余2天1时37分18秒</p>
+                <p class="cr-second">
+                  <a href="javascript:void(0);" class="second-left" data-id="1270">
+                    <img src="image/favorable/ico_18.png"><span>加入购物车</span>
+                  </a>
+                  <a href="javascript:void(0);" class="second-right" data-id="1270">立即购买</a>
+                </p>
+              </div>
+              <br class="clear">
+            </div>
+          </div>
+        </div>
+        <div class="bpro-left">
+          <a href="#" class="bpleft-top">
+            <img src="image/favorable/201805291115269112.jpg">
+          </a>
+          <div class="bpleft-bottom">
+            <div class="bottom-content">
+              <p class="bb-first"><lu><a class="cutter" href="#">乐扣乐扣昆虫系列玻璃水杯（390ML）</a></lu></p>
+              <div class="content-left">
+                <p class="bbc-first"><span class="bbcf-num">7.0</span><span class="bbcf-font">折</span></p>
+                <div class="suggestPrice-container pl0">
+                  <del>
+                    <div class="suggestPrice-label">建议零售价</div><div>￥88.00</div>
+                  </del>
+                </div>
+                <div class="price-container pl0">
+                  <div class="price-label">售　　　价</div><div class="price-text">￥61.60</div>
+                </div>
+                <p class="bbc-four clear">
+                  <span class="four-left">计划库存：60</span><span class="four-right">现有库存：1148</span>
+                </p>
+                <p class="bbc-five">
+                  <a href="#" class="five-left">
+                    <img src="image/favorable/shico_04.png"><span>分享</span>
+                  </a>
+                  <a href="javascript:addCollInfo($('#hidUserID').val(),1232,true)" class="five-right">
+                    <img src="image/favorable/ico_28.png"><span>收藏</span>
+                  </a>
+                </p>
+              </div>
+              <div class="content-right">
+                  <script type="text/javascript">
+                    setInterval(function () {
+                      var date = new Date();
+                      var EndTime = new Date('2018/10/31 23:59:00'); //截止时间 传数据
+                      if (EndTime >= date) {//是否判断结束时间
+                        var NowTime = new Date();
+                        var t = EndTime.getTime() - NowTime.getTime();
+                        var d = Math.floor(t / 1000 / 60 / 60 / 24);
+                        var h = Math.floor(t / 1000 / 60 / 60 % 24);
+                        var m = Math.floor(t / 1000 / 60 % 60);
+                        var s = Math.floor(t / 1000 % 60);
+                        var timeStr = "剩余" + d + "天" + h + "时" + m + "分" + s + "秒";
+                        document.getElementById('endTime1571').innerHTML = timeStr;
+                      } else {document.getElementById('endTime1571').innerHTML = "已结束";}
+                    }, 1000);
+                  </script>
+                  <p class="cr-first" id="endTime1571">剩余2天1时37分18秒</p>
+                  <p class="cr-second">
+                    <a href="javascript:void(0);" class="second-left" data-id="1232">
+                      <img src="image/favorable/ico_18.png"><span>加入购物车</span>
+                    </a>
+                    <a href="javascript:void(0);" class="second-right" data-id="1232">立即购买</a>
+                  </p>
+              </div>
+              <br class="clear">
+            </div>
+          </div>
+        </div>
+        <div class="bpro-left">
+            <a href="#" class="bpleft-top">
+              <img src="image/favorable/201805291111170434.jpg">
+            </a>
+            <div class="bpleft-bottom">
+              <div class="bottom-content">
+                <p class="bb-first"><lu><a class="cutter" href="#">乐扣乐扣电热水壶（1.7L）</a></lu></p>
+                <div class="content-left">
+                  <p class="bbc-first"><span class="bbcf-num">4.0</span><span class="bbcf-font">折</span></p>
+                  <div class="suggestPrice-container pl0">
+                    <del>
+                      <div class="suggestPrice-label">建议零售价</div><div>￥568.00</div>
+                    </del>
+                  </div>
+                  <div class="price-container pl0">
+                    <div class="price-label">售　　　价</div><div class="price-text">￥227.20</div>
+                  </div>
+                  <p class="bbc-four clear">
+                    <span class="four-left">计划库存：10</span><span class="four-right">现有库存：119</span>
+                  </p>
+                  <p class="bbc-five">
+                    <a href="#" class="five-left">
+                      <img src="image/favorable/shico_04.png"><span>分享</span>
+                    </a>
+                    <a href="javascript:addCollInfo($('#hidUserID').val(),1232,true)" class="five-right">
+                      <img src="image/favorable/ico_28.png"><span>收藏</span>
+                    </a>
+                  </p>
+                </div>
+                <div class="content-right">
+                    <script type="text/javascript">
+                      setInterval(function () {
+                        var date = new Date();
+                        var EndTime = new Date('2018/10/31 23:59:00'); //截止时间 传数据
+                        if (EndTime >= date) {//是否判断结束时间
+                          var NowTime = new Date();
+                          var t = EndTime.getTime() - NowTime.getTime();
+                          var d = Math.floor(t / 1000 / 60 / 60 / 24);
+                          var h = Math.floor(t / 1000 / 60 / 60 % 24);
+                          var m = Math.floor(t / 1000 / 60 % 60);
+                          var s = Math.floor(t / 1000 % 60);
+                          var timeStr = "剩余" + d + "天" + h + "时" + m + "分" + s + "秒";
+                          document.getElementById('endTime1572').innerHTML = timeStr;
+                        } else {document.getElementById('endTime1572').innerHTML = "已结束";}
+                      }, 1000);
+                    </script>
+                    <p class="cr-first" id="endTime1572">剩余2天1时37分18秒</p>
+                    <p class="cr-second">
+                      <a href="javascript:void(0);" class="second-left">
+                        <img src="image/favorable/ico_18.png"><span>加入购物车</span>
+                      </a>
+                      <a href="javascript:void(0);" class="second-right">立即购买</a>
+                    </p>
+                </div>
+                <br class="clear">
+              </div>
+            </div>
+          </div>
+      </div>
+      <br class="clear">
+    </div>
+  </div>
+  <!--------底部----------->
+  <footer id="footer"></footer>
+</body>
+</html>
